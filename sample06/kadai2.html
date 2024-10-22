@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>変数の演算</title>
+</head>
+<body>
+    <h1>利用料の計算</h1>
+    <table border="1" style="border-collapse:collapse" width="500" height="200">
+        <tr bgcolor="orange">
+            <th>No.</th>
+            <th>料金(a)</th>
+            <th>人数(b)</th>
+            <th>a×b</th>
+        </tr>
+        <tr>
+            <th bgcolor="orange">0</th>
+            <th align="right">500</th>
+            <th align="right">10</th>
+            <th><button onclick="showA();">利用料の合計</button></th>
+        </tr>
+        <tr>
+            <th bgcolor="orange">1</th>
+            <th align="right">980</th>
+            <th align="right">16</th>
+            <th><button onclick="showB();">利用料の合計</button></th>
+        </tr>
+        <tr>
+            <th bgcolor="orange">2</th>
+            <th align="right">1200</th>
+            <th align="right">8</th>
+            <th><button onclick="showC();">利用料の合計</button></th>
+        </tr>
+    </table>
+    <script>
+        function showA(){
+            let a = 500
+            let b = 10;
+            let c = 0;
+            c = a * b;
+            alert('料金は' + c + '円です');
+        }
+        function showB(){
+            let a = 980
+            let b = 16;
+            let c = 0;
+            c = a * b;
+            alert('料金は' + c + '円です');
+        }
+        function showC(){
+            let a = 1200
+            let b = 8;
+            let c = 0;
+            c = a * b;
+            alert('料金は' + c + '円です');
+        }
+    </script>
+</body>
+</html>
