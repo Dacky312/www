@@ -35,27 +35,21 @@
         </tr>
     </table>
     <script>
-        function showA(){
-            let a = 500
-            let b = 10;
-            let c = 0;
-            c = a * b;
-            alert('料金は' + c + '円です');
-        }
-        function showB(){
-            let a = 980
-            let b = 16;
-            let c = 0;
-            c = a * b;
-            alert('料金は' + c + '円です');
-        }
-        function showC(){
-            let a = 1200
-            let b = 8;
-            let c = 0;
-            c = a * b;
-            alert('料金は' + c + '円です');
-        }
+        const a = [500,980,1200];
+        const b = [10,16,8];
+        let anser = 0;
+            function showA(){
+                anser = a[0] * b[0];
+                alert('料金は' + anser + '円です');
+            }
+            function showB(){
+                anser = a[1] * b[1];
+                alert('料金は' + anser + '円です');
+            }
+            function showC(){
+                anser = a[2] * b[2];
+                alert('料金は' + anser + '円です');
+            }
     </script>
 </body>
 </html>
