@@ -19,34 +19,34 @@
             <th bgcolor="orange">0</th>
             <th align="right">500</th>
             <th align="right">10</th>
-            <th><button onclick="showA();">利用料の合計</button></th>
+            <th><button onclick="multiply_0();">利用料の合計</button></th>
         </tr>
         <tr>
             <th bgcolor="orange">1</th>
             <th align="right">980</th>
             <th align="right">16</th>
-            <th><button onclick="showB();">利用料の合計</button></th>
+            <th><button onclick="multiply_1();">利用料の合計</button></th>
         </tr>
         <tr>
             <th bgcolor="orange">2</th>
             <th align="right">1200</th>
             <th align="right">8</th>
-            <th><button onclick="showC();">利用料の合計</button></th>
+            <th><button onclick="multiply_2();">利用料の合計</button></th>
         </tr>
     </table>
     <script>
         const a = [500,980,1200];
         const b = [10,16,8];
         let anser = 0;
-            function showA(){
+            function multiply_0(){
                 anser = a[0] * b[0];
                 alert('料金は' + anser + '円です');
             }
-            function showB(){
+            function multiply_1(){
                 anser = a[1] * b[1];
                 alert('料金は' + anser + '円です');
             }
-            function showC(){
+            function multiply_2(){
                 anser = a[2] * b[2];
                 alert('料金は' + anser + '円です');
             }
