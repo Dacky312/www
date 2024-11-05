@@ -4,22 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style> 
+      .image-container { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+      } 
+      .image-container img { 
+        margin: 10px 0; 
+        width: 200px; 
+        height: auto; 
+      }
+    </style>
 </head>
-<body>
-    <h1>人口の多い国ランコング</h1>
-    <div class="box" onclick="changeDisplay()">国旗で表示</div>
-    <div id="test" class="box">表示・非表示切り替え</div>
-    <div id="test2" class="box"></div>
-<script>
-    const changeDisplay = () => {
-        var ele = document.getElementById('test');
-       
-        if (ele.style.display == 'none') {
-         ele.style.display = 'block'; 
-        } else {
-          ele.style.display = 'none';
-        }
-      };
+<body> 
+  <h1>人口の多い国ランキング</h1>
+  <p class="textElement">中国</p> 
+  <p class="textElement">インド</p> 
+  <p class="textElement">アメリカ</p> 
+  <p class="textElement">インドネシア</p> 
+  <button id="replaceButton">国旗で表示</button> 
+  <script> 
+    document.getElementById('replaceButton').addEventListener('click', function() { 
+      const textElements = document.querySelectorAll('.textElement');
+      const images = [ 'img1/flag_CHN.png', 
+                      'img1/flag_IND.png', 
+                      'img1/flag_USA.png', 
+                      'img1/flag_IDN.png' ]; 
+      textElements.forEach((textElement, index) => {
+         const img = document.createElement('img'); 
+         img.src = images[index]; 
+         textElement.replaceWith(img);
+      }); 
+      this.style.display = 'none'; 
+    }); 
 </script>
-</body>
 </html>
