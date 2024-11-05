@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang=”ja”>
+<head>
+<meta charset=”UTF-8″>
+<title>かいけつプログラム</title>
+</head>
+<body> 
+    <button id="showImagesButton">画像を表示する</button> 
+    <div class="image-container" id="imageContainer"></div> 
+    <script> document.getElementById('showImagesButton').addEventListener('click', function() { const imageContainer = document.getElementById('imageContainer'); const images = [ 'img2/photo_1.jpg', 'img2/photo_1.jpg', 'img2/photo_1.jpg' ]; images.forEach(src => { const img = document.createElement('img'); img.src = src; imageContainer.appendChild(img); }); });
+    </script>
+</html>

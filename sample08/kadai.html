@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>人口の多い国ランコング</h1>
+    <div class="box" onclick="changeDisplay()">国旗で表示</div>
+    <div id="test" class="box">表示・非表示切り替え</div>
+    <div id="test2" class="box"></div>
+<script>
+    const changeDisplay = () => {
+        var ele = document.getElementById('test');
+       
+        if (ele.style.display == 'none') {
+         ele.style.display = 'block'; 
+        } else {
+          ele.style.display = 'none';
+        }
+      };
+</script>
+</body>
+</html>
