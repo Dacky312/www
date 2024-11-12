@@ -8,13 +8,19 @@
         .color{
             color: red;
         }
+        .text{
+            display: flex;
+        }
     </style>
 </head>
 <body> 
     <h1>座席の予約</h1>
     <div class="yoyaku">
-        <p>東京会場</p>
-        <p id="reservationStatus" class="color">(予約受付中)</p>
+        <div class="text">
+            <p>東京会場</p>
+            <p id="reservationStatus" class="color">(予約受付中)</p>
+        </div>
+        
         <button id="reservationButton">予約する</button>
     </div> 
     <p id="thankYouMessage" style="display: none;">ありがとうございます</p> 
