@@ -24,8 +24,9 @@
 <script>
     let anser = [];
     let count = 0;
+    let x = 0;
     function show(){
-        for(let x = 1; x <= 100; x++){
+        while(count <= 4){
             if(x ** 3 - 53 * x ** 2 + 620 * x - 1036 == 0){
                 anser.push(x);
                 count++;
@@ -33,6 +34,7 @@
             if(count == 3){
                 break;
             }
+            x++;
         }
         document.getElementById('message').textContent = `${anser.join(', ')} が解です。`; 
     }
