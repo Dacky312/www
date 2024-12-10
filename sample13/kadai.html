@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>breakの活用</title>
+<style>
+    .mas{
+        font-size: 40px;
+        margin-left: 30px;
+    }
+</style>
+</head>
+
+<body>
+<h3>1～10で割り切れる数字</h3>
+<p>1，2，3，4，5，6，7，8，9，10で</br>割り切れる最小の数値をJavaScriptで求めます。</p>
+<button onclick="show()">結果を見る</button>
+<div id="message" class="mas"></div>
+
+<script>
+    function math(anr){
+        for(let i = 1; i <= 10; i++){
+            if(anr % i !== 0){
+                return false;
+            }
+        }
+        return true;
+    }
+    function show(){
+        let num = 1;
+        while(true){
+            if(math(anr)){
+                document.getElementById('message').textContent = `${anr}が解です。`; 
+                break;
+            }
+            anr++
+        }
+    }
+</script>
+
+</body>
+
+</html>
