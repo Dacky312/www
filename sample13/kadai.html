@@ -2,44 +2,40 @@
 
 <html lang="ja">
 
-<head>
-<meta charset="UTF-8">
-<title>breakの活用</title>
-<style>
-    .mas{
-        font-size: 40px;
-        margin-left: 30px;
-    }
-</style>
-</head>
-
-<body>
-<h3>1～10で割り切れる数字</h3>
-<p>1，2，3，4，5，6，7，8，9，10で</br>割り切れる最小の数値をJavaScriptで求めます。</p>
-<button onclick="show()">結果を見る</button>
-<div id="message" class="mas"></div>
-
-<script>
-    function math(anr){
-        for(let i = 1; i <= 10; i++){
-            if(anr % i !== 0){
-                return false;
-            }
+<head> 
+    <meta charset="UTF-8"> 
+    <title>関数の戻り値</title> 
+    <style>
+        .result{
+            font-size: 20px;
+            display:inline-block;
+            margin-top: 10%;
+            background-color: orange;
         }
-        return true;
-    }
-    function show(){
-        let num = 1;
-        while(true){
-            if(math(anr)){
-                document.getElementById('message').textContent = `${anr}が解です。`; 
-                break;
-            }
-            anr++
-        }
-    }
-</script>
-
+    </style> 
+</head> 
+<body> 
+    <h1>1～10で割り切れる数字</h1> 
+    <p>1，2，3，4，5，6，7，8，9，10で</br>割り切れる最小の数値をJavaScriptで求めます。</p>
+    <div><button onclick="findLCM()">結果を見る</button> </div>
+    <div id="message" class="result">ここに結果が表示されます。</div> 
+    <script> 
+        function isDivisible(num) { 
+            for (let i = 1; i <= 10; i++) { 
+                if (num % i !== 0) { 
+                    return false; 
+                } 
+            } return true; 
+        } function findLCM() { 
+            let num = 1; 
+            while (true) { 
+                if (isDivisible(num)) { 
+                    document.getElementById('message').textContent = `答え${num} です。`; 
+                    break; 
+                } num++; 
+            } 
+        } 
+    </script> 
 </body>
 
 </html>
