@@ -32,7 +32,7 @@
             let num = 1; 
             while (true) { 
                 if (isDivisible(num,a,b)) { 
-                    document.getElementById('message').textContent = `1~4で割り切れる最小の数値は${num} です。`; 
+                    document.getElementById('message').textContent = a + '~' + b +`で割り切れる最小の数値は${num} です。`; 
                     break; 
                 } num++; 
             } 
