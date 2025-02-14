@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品ページ</title>
+    <style>
+        /*PC向け*/
+        @media screen and (min-width: 481px) {
+            body{
+                background-color: white;
+            }
+            header{
+                text-align: center;
+                width: 100%;
+                height: 60px;
+                background-color: dimgray;
+                padding-top: 5px;
+                box-sizing: border-box;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+            ul li{
+                list-style: none;
+                display: inline-block;
+                width: 10%;
+                min-width: 90px;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 170%;
+                white-space: nowrap;
+            }
+            a.current{
+                color: #00B0F0;
+                border-bottom: 2px solid #00B0F0;
+            }
+            a:hover{
+                color: rgb(214, 237, 248);
+                border-bottom: 2px solid white;
+            }
+            main{
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            }
+            .category1{
+                display: flex;
+            }
+            .category2{
+                display: flex;
+            }
+            .category3{
+                display: flex;
+            }
+            .s1 {
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                text-align: center;
+                transition: transform 0.3s, box-shadow 0.3s;
+                width: 300px;
+                margin: 20px;
+            }
+            .s1:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            .s1 img {
+                width: 100%;
+                height: auto;
+            }
+            .s1 h2 {
+                margin: 15px 0;
+            }
+            .s1 p {
+                color: #666;
+                margin: 0 15px 15px;
+            }
+            .button {
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                margin-bottom: 15px;
+                padding: 10px 20px;
+                transition: background-color 0.3s;
+            }
+            .button:hover {
+                background-color: #45a049;
+            }
+            @media (max-width: 768px) {
+                .profile-card {
+                    width: 90%;
+                }
+            }
+        }
+        /*スマホ向け*/
+        @media screen and (max-width:480px) {
+            header{
+                text-align: center;
+                width: 100%;
+                height: 40px;
+                background-color: dimgray;
+                padding-top: 5px;
+                box-sizing: border-box;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+            ul li{
+                list-style: none;
+                display: inline-block;
+                width: 10%;
+                min-width: 90px;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 100%;
+                white-space: nowrap;
+            }
+            a.current{
+                color: #00B0F0;
+                border-bottom: 2px solid #00B0F0;
+            }
+            a:hover{
+                color: rgb(214, 237, 248);
+                border-bottom: 2px solid white;
+            }
+        }
+    </style>
+    <script>
+        function SyouhinAlert(){
+            alert('商品詳細に移動');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="main.html">ホーム</a></li>
+            <li><a href="syoukai.html">紹介</a></li>
+            <li><a href="syouhin.html">商品</a></li>
+            <li><a href="toiawase.html">問い合わせ</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="mainsub">
+            <div class="sr">
+                <div class="text1">
+                    <h2>栓抜き</h2>
+                </div>
+                <div class="category1">
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040535461_iOS.jpg" alt="商品画像">
+                        <h2>ひょうたん</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040530322_iOS.jpg" alt="商品画像">
+                        <h2>達磨ひょうたん</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040545529_iOS.jpg" alt="商品画像">
+                        <h2>商売繁盛</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040547976_iOS.jpg" alt="商品画像">
+                        <h2>無病息災（円形）</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sr2">
+                <div class="text2">
+                    <h2>座布団</h2>
+                </div>
+                <div class="category2">
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040535461_iOS.jpg" alt="商品画像">
+                        <h2>ひょうたん</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040530322_iOS.jpg" alt="商品画像">
+                        <h2>達磨ひょうたん</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040545529_iOS.jpg" alt="商品画像">
+                        <h2>商売繁盛</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040547976_iOS.jpg" alt="商品画像">
+                        <h2>無病息災（円形）</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sr3">
+                <div class="text3">
+                    <h2>ひょうたん</h2>
+                </div>
+                <div class="category3">
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040535461_iOS.jpg" alt="商品画像">
+                        <h2>ひょうたん</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040530322_iOS.jpg" alt="商品画像">
+                        <h2>達磨ひょうたん</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040545529_iOS.jpg" alt="商品画像">
+                        <h2>商売繁盛</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                    <div class="s1">
+                        <img src="img/merchandise/20240625_040547976_iOS.jpg" alt="商品画像">
+                        <h2>無病息災（円形）</h2>
+                        <button class="button" onclick="SyouhinAlert()">詳細</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

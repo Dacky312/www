@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安田ひょうたん店</title>
+    <style>
+        /*PC向けcss*/
+        @media screen and (min-width: 481px) {
+            body{
+                background-color: white;
+            }
+            header{
+                text-align: center;
+                width: 100%;
+                height: 60px;
+                background-color: dimgray;
+                padding-top: 5px;
+                box-sizing: border-box;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+            ul li{
+                list-style: none;
+                display: inline-block;
+                width: 10%;
+                min-width: 90px;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 170%;
+                white-space: nowrap;
+            }
+            a.current{
+                color: #00B0F0;
+                border-bottom: 2px solid #00B0F0;
+            }
+            a:hover{
+                color: rgb(214, 237, 248);
+                border-bottom: 2px solid white;
+            }
+            .mainHome{
+                height: auto;
+                position: relative;
+            }
+            .mainHome img{
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            .top{
+                font-family: serif;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                padding: 0;
+                margin: 0;
+                font-size: 4vmax;
+                color: white;
+                white-space: nowrap;
+            }
+            .top1{
+                font-family: serif;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                padding: 0;
+                margin: 0;
+                font-size: 2vmax;
+                color: white;
+                white-space: nowrap;
+            }
+            .top2{
+                font-family: serif;/*absoluteの中に配置*/
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                white-space: nowrap;/*文字列を一列にする*/
+                padding: 0;
+                margin: 0;
+                font-size: 1vmax;
+                background-color: gray;
+                color: white;
+
+            }
+            main{
+                justify-content: center;
+                background-color: whitesmoke;
+                padding: 0;
+                margin: 0;
+            }
+            .Hist{
+                display: flex; /*横並び*/
+                justify-content: center;
+            }
+            .Hist-img{
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                position: relative;
+            }
+            .right{
+                margin: 0 0 0 20px;
+                padding: 0;
+            }
+            .Hist-title{
+                font-family: serif;
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                font-size: 30px;
+                white-space: nowrap;
+                border-bottom: 5px solid #00B0F0;
+            }
+            .Hist-text{
+                font-size: 20px;
+                font-family: serif;
+                margin: 10px 0 0 ;
+                padding: 0;
+            }
+            .syoukai{
+                display: flex;
+                justify-content: center;
+            }
+            .syoukai-text1{
+                color: rgb(121, 103, 0);
+                font-family: serif;
+                font-size: 30px;
+                padding: 0;
+                margin: 0;
+                border-bottom: 5px solid rgb(121, 103, 0);
+            }
+            .syoukai-text2{
+                font-family: serif;
+                font-size: 20px;
+            }
+            .kome img{
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+            }
+            .syoukai2{
+                display: flex;
+                justify-content: center;
+            }
+            .syoukai2 img{
+                width: 300px;
+                height: 500px;
+                border-radius: 30%;
+                transform: rotate(-15deg);
+                padding: 10px;
+                margin: 10px;
+            }
+            .syoukai2-text1{
+                color: rgb(121, 103, 0);
+                font-family: serif;
+                font-size: 30px;
+                padding: 0;
+                margin: 0;
+                border-bottom: 5px solid rgb(121, 103, 0);
+            }
+            .syoukai2-text2{
+                font-family: serif;
+                font-size: 20px;
+                padding-left: 50px;
+            }
+            .sub{
+                background-color: #ffffff;
+                text-align: center;
+            }
+            .sub h1{
+                color: rgb(121, 103, 0);
+                font-family: serif;
+                font-size: 30px;
+                padding: 0;
+                margin: 0;
+            }
+            .s-box-text{
+                text-align: center;
+                position: relative;
+                display: inline-block;
+                width: 100%;
+            }
+            .s-box-text::after{
+                content: '';
+                display: block;
+                width: 60%; /* 下線の長さ */
+                height: 5px;
+                background-color: rgb(121, 103, 0);
+                margin: 0 auto;
+                position: relative;
+                bottom: -5px;
+            }
+                .cards{
+                display: flex;
+                justify-content: center;
+            }
+            .card {
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                text-align: center;
+                transition: transform 0.3s, box-shadow 0.3s;
+                width: 300px;
+                margin: 20px;
+            }
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            .card img {
+                width: 100%;
+                height: auto;
+            }
+            .card h2 {
+                font-family: serif;
+                margin: 15px 0;
+            }
+            .card p {
+                color: #666;
+                font-family: serif;
+                margin: 0 15px 15px;
+            }   
+            .social-icons {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+            .social-icons a {
+                color: #333;
+                margin: 0 10px;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+            .social-icons a:hover {
+                color: #0073e6;
+            }
+            .button {
+                font-family: serif;
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                margin-bottom: 15px;
+                padding: 10px 20px;
+                transition: background-color 0.3s;
+            }
+            .button:hover {
+                background-color: #45a049;
+            }
+            @media (max-width: 768px) {
+                .profile-card {
+                    width: 90%;
+                }
+            }
+        }
+        /*スマホ向けcss*/
+        @media screen and (max-width:480px) {
+            header{
+                text-align: center;
+                width: 100%;
+                height: 40px;
+                background-color: dimgray;
+                padding-top: 5px;
+                box-sizing: border-box;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+            ul li{
+                list-style: none;
+                display: inline-block;
+                width: 10%;
+                min-width: 90px;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 100%;
+                white-space: nowrap;
+            }
+            a.current{
+                color: #00B0F0;
+                border-bottom: 2px solid #00B0F0;
+            }
+            a:hover{
+                color: rgb(214, 237, 248);
+                border-bottom: 2px solid white;
+            }
+            .mainHome{
+                height: auto;
+                position: relative;
+            }
+            .mainHome img{
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            .top{
+                font-family: serif;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                padding: 0;
+                margin: 0;
+                font-size: 2vmax;
+                color: white;
+                white-space: nowrap;
+            }
+            .top1{
+                font-family: serif;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                padding: 0;
+                margin: 0;
+                font-size: 1.5vmax;
+                color: white;
+                white-space: nowrap;
+            }
+            .top2{
+                display: none;
+            }
+            main{
+                justify-content: center;
+                background-color: whitesmoke;
+                padding: 0;
+                margin: 0;
+            }
+            .Hist{
+                display: flex; /*横並び*/
+                justify-content: center;
+            }
+            .Hist-img{
+                width: 200px;
+                height: 200px;
+                object-fit: scale-down;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            .right{
+                margin: 0 0 0 20px;
+                padding: 0;
+            }
+            .Hist-title{
+                font-family: serif;
+                margin: 0;
+                padding: 0;
+                    font-weight: bold;
+                font-size: 10px;
+                white-space: nowrap;
+                border-bottom: 5px solid #00B0F0;
+            }
+            .Hist-text{
+                font-size: 8px;
+                font-family: serif;
+                margin: 10px 0 0 ;
+                padding: 0;
+                position: relative;
+            }
+            .syoukai{
+                display: flex;
+                justify-content: center;
+            }
+            .syoukai-text1{
+                color: rgb(121, 103, 0);
+                font-family: serif;
+                font-size: 7px;
+                padding: 0;
+                margin: 0;
+                border-bottom: 5px solid rgb(121, 103, 0);
+            }
+            .syoukai-text2{
+                font-family: serif;
+                font-size: 7px;
+            }
+            .kome img{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
+            .kome p{
+                font-size: 7px;
+                background-color: yellow;
+            }
+            .syoukai2{
+                display: flex;
+                justify-content: center;
+            }
+            .syoukai2 img{
+                width: 80px;
+                height: 120px;
+                border-radius: 30%;
+                transform: rotate(-15deg);
+                padding: 10px;
+                margin: 10px;
+            }
+            .syoukai2-text1{
+                color: rgb(121, 103, 0);
+                font-family: serif;
+                font-size: 7px;
+                padding: 0;
+                margin: 0;
+                border-bottom: 5px solid rgb(121, 103, 0);
+            }
+            .syoukai2-text2{
+                font-family: serif;
+                font-size: 7px;
+                padding-left: 50px;
+            }
+            .sub{
+                background-color: #bcbcbc;
+                text-align: center;
+            }
+            .sub h1{
+                color: rgb(121, 103, 0);
+                font-family: serif;
+                font-size: 20px;
+                padding: 0;
+                margin: 0;
+            }
+            .cards{
+                align-items: center;
+                justify-content: center;
+            }
+            .card {
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                text-align: center;
+                transition: transform 0.3s, box-shadow 0.3s;
+                width: 300px;
+                margin: 20px;
+            }
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            .card img {
+                width: 100%;
+                height: auto;
+            }
+            .card h2 {
+                font-family: serif;
+                margin: 15px 0;
+            }
+            .card p {
+                font-family: serif;
+                color: #666;
+                margin: 0 15px 15px;
+            }   
+            .social-icons {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+            .social-icons a {
+                color: #333;
+                margin: 0 10px;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+            .social-icons a:hover {
+                color: #0073e6;
+            }
+            .button {
+                font-family: serif;
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                margin-bottom: 15px;
+                padding: 10px 20px;
+                transition: background-color 0.3s;
+            }
+            .button:hover {
+                background-color: #45a049;
+            }
+            @media (max-width: 768px) {
+                .profile-card {
+                    width: 90%;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <header>
+        <ul>
+            <li><a href="main.html">ホーム</a></li>
+            <li><a href="syoukai.html">紹介</a></li>
+            <li><a href="syouhin.html">商品</a></li>
+            <li><a href="toiawase.html">問い合わせ</a></li>
+        </ul>
+    </header>
+    <div class="mainHome">
+        <img src="img/s/20240629_021541834_iOS.jpg" alt="店舗写真">
+        <div class="top">
+            <h2>安田ひょうたん店</h2>
+        </div>
+        <div class="top1">
+            <p>岐阜県養老郡養老町で、創業70年<br>ひょうたんに関するすべての物を販売しております。</p>
+        </div>
+        <div class="top2">
+            <ul>
+                <li><a href="youhin.html">商品を見る</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <div class="Hist">
+            <div class="Hist-img">
+                <img src="img/s/20240629_021546945_iOS.jpg" alt="ひょうたん", width="700", height="400">
+            </div>
+            <div class="right">
+                <div class="Hist-title">
+                    <h2>ひょうたんの歴史</h2>
+                </div>
+                <div class="Hist-text">
+                    <p>岐阜県養老町はその昔、<br>「親孝行息子が養老の滝の水をひょうたんに入れて持ち帰ったところ<br>
+                       お酒に代 わり病気のお父さんが元気になっ た」という<br>「養老の滝伝説」からひょ うたんを町のシンボルとして掲げ、 <br>
+                       かつては土産物としての販売が盛 んで栽培農家も多くありました。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="syoukai">
+            <div class="syoukai-textbox">
+                <div class="syoukai-text1">
+                    <h1>一つ一つに違う表情の天然素材。<br>インテリアや贈り物にいかがですか？</h1>
+                </div>
+                 <div class="syoukai-text2">
+                    <p>滝の水が酒に変わったという伝説「養老孝子物語」で有名な岐阜県養老<br>
+                        安田ひょうたん店では、２代目店主が、一つ一つ心を込めて仕上げております。<br>
+                        天然素材を使用しておりますので同じものは２つとございません。<br>
+                        あなただけのお品物を探しに、遊びにいらしてください。
+                    </p>
+                </div>
+            </div>
+            <div class="kome">
+                <img src="img/s/IMG_4701.JPG" alt="店舗裏畑">
+                <p>瓢箪は当店の畑で育てられたもののみを使用</p>
+            </div>
+        </div>
+        <div class="syoukai2">
+            <img src="img/s/S__3244080.jpg">
+            <div class="syoukai2-textbox">
+                <div class="syoukai2-text1">
+                    <h1>ご結婚のお祝いや新築祝い、<br>出産祝い、長寿のお祝いに・・・</h1>
+                </div>
+                <div class="syoukai2-text2">
+                    <p>縁起の良い瓢箪はお祝いの贈り物に最適です。<br>
+                        お名前や記念日、メッセージなどをお入れいたします。<br>
+                        紐や房の色もお選びいただけます。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="sub">
+            <div class="s-box">
+                <div class="s-box-text">
+                    <h1>店主おすすめの品物</h1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="img/s/S__226295815.jpg" alt="Profile Image">
+                        <h2>癒しの灯</h2>
+                        <p>ほのかに灯る瓢箪の明かりは心穏やかな空間を演出します。寝室の保安灯として新築のお祝いにも喜ばれます。</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                        <button class="button"><li><a href="3.html">詳細を見る</a></li></button>
+                    </div>
+                    <div class="card">
+                        <img src="img/s/S__226295815.jpg" alt="Profile Image">
+                        <h2>お守りに</h2>
+                        <p>6個の瓢箪を束ねる事で無病(六瓢)息災</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                        <button class="button"><li><a href="3.html">詳細を見る</a></li></button>
+                    </div>
+                    <div class="card">
+                        <img src="img/s/S__226295815.jpg" alt="Profile Image">
+                        <h2>お祝いに</h2>
+                        <p>健やかな成長を願って、誕生日や出産祝い、長寿のお祝いに。記念日や名入れも承ります。</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                        <button class="button"><li><a href="3.html">詳細を見る</a></li></button>
+                    </div>
+                </div>    
+            </div>
+            <div class="s-box">
+                <div class="s-box-text">
+                    <h1>縁起物</h1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="img/s/S__226295815.jpg" alt="Profile Image">
+                        <h2>癒しの灯</h2>
+                        <p>ほのかに灯る瓢箪の明かりは心穏やかな空間を演出します。寝室の保安灯として新築のお祝いにも喜ばれます。</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                        <button class="button"><li><a href="3.html">詳細を見る</a></li></button>
+                    </div>
+                    <div class="card">
+                        <img src="img/s/S__226295815.jpg" alt="Profile Image">
+                        <h2>お守りに</h2>
+                        <p>6個の瓢箪を束ねる事で無病(六瓢)息災</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                        <button class="button"><li><a href="3.html">詳細を見る</a></li></button>
+                    </div>
+                    <div class="card">
+                        <img src="img/s/S__226295815.jpg" alt="Profile Image">
+                        <h2>お祝いに</h2>
+                        <p>健やかな成長を願って、誕生日や出産祝い、長寿のお祝いに。記念日や名入れも承ります。</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                        <button class="button"><li><a href="3.html">詳細を見る</a></li></button>
+                    </div>
+                </div>
+            </div>
+            <div class="s-box">
+                <div class="s-box-text">
+                    <h1>ワンポイント</h1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="img/s/S__226295815.jpg" alt="Profile Image">
+                        <h2>癒しの灯</h2>
+                        <p>ほのかに灯る瓢箪の明かりは心穏やかな空間を演出します。寝室の保安灯として新築のお祝いにも喜ばれます。</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                        <button class="button"><li><a href="3.html">詳細を見る</a></li></button>
+                    </div>
+                    <div class="card">
+                        <img src="img/s/S__226295815.jpg" alt="Profile Image">
+                        <h2>お守りに</h2>
+                        <p>6個の瓢箪を束ねる事で無病(六瓢)息災</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                        <button class="button"><li><a href="3.html">詳細を見る</a></li></button>
+                    </div>
+                    <div class="card">
+                        <img src="img/s/S__226295815.jpg" alt="Profile Image">
+                        <h2>お祝いに</h2>
+                        <p>健やかな成長を願って、誕生日や出産祝い、長寿のお祝いに。記念日や名入れも承ります。</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                        <button class="button"><li><a href="3.html">詳細を見る</a></li></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
